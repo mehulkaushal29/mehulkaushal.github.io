@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,72 +8,78 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="navbar glass">
     <div class="nav-left">Mehul Kaushal</div>
     <div class="nav-right">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
+      <button class="toggle-theme" onclick="toggleTheme()">🌓</button>
     </div>
   </nav>
 
-  <header class="centered-header">
-    <h1>Mehul Kaushal</h1>
-    <p class="subtitle">IT Student | Tech & Innovation Enthusiast</p>
-    <div class="social-icons">
-      <a href="https://github.com/mehulkaushal29" target="_blank" class="circle-icon">🐱</a>
-      <a href="https://linkedin.com/in/mehul-kaushal-80a625272/" target="_blank" class="circle-icon">in</a>
+  <header class="hero-section animate">
+    <img src="profile.jpg" alt="Profile Photo" class="profile-pic" />
+    <div class="hero-text">
+      <h1>Mehul Kaushal</h1>
+      <p class="subtitle">IT Student · Tech & Innovation Enthusiast</p>
+      <div class="social-icons">
+        <a href="https://github.com/mehulkaushal29" target="_blank" class="circle-icon">🐱</a>
+        <a href="https://linkedin.com/in/mehul-kaushal-80a625272/" target="_blank" class="circle-icon">in</a>
+      </div>
     </div>
   </header>
 
   <a class="resume-fab" href="Mehul Kaushal (Resume).pdf" download>📄 Resume</a>
 
-  <section id="about" class="about">
+  <section id="about" class="section animate">
     <h2>About Me</h2>
     <p>
-      I’m currently pursuing a Bachelor of Information Technology at La Trobe University.
-      I’ve worked on full-stack development and taught robotics and Python to students.
-      I'm passionate about creating tech solutions that have real-world impact.
+      I'm currently pursuing a Bachelor of Information Technology at La Trobe University. I’ve worked on full-stack development, and taught robotics and Python to students.
+      Passionate about building solutions with impact.
     </p>
-
-    <p>My recent projects and challenges include:</p>
     <ul>
-      <li>🚀 Medibank Hackathon, Coles Group Industry Challenge</li>
-      <li>🧠 Digital Industry Project (2023)</li>
-      <li>🏆 Career Ready Advantage Program (Silver)</li>
+      <li>🚀 Medibank Hackathon, Coles Group Challenge</li>
+      <li>🧠 Digital Industry Project</li>
+      <li>🏆 Career Ready Program (Silver)</li>
     </ul>
-    <p>
-      Do check out my <a href="https://linkedin.com/in/mehul-kaushal-80a625272/" target="_blank">LinkedIn</a> profile for more.
-    </p>
   </section>
 
-  <section id="skills" class="skills">
-    <h2>Technologies & Languages</h2>
+  <section id="skills" class="section animate alt-section">
+    <h2>Technologies</h2>
+    <p>Always eager to learn something new, strong foundations in full-stack development.</p>
     <div class="tech-tags">
-      <span>Python</span>
-      <span>Java</span>
-      <span>C++</span>
-      <span>C#</span>
-      <span>PHP</span>
-      <span>JavaScript</span>
-      <span>HTML5</span>
-      <span>CSS3</span>
-      <span>SQL</span>
-      <span>Vue.js</span>
-      <span>Laravel</span>
-      <span>R</span>
-      <span>Adobe XD</span>
+      <span>Python</span><span>Java</span><span>C++</span><span>C#</span>
+      <span>PHP</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span>
+      <span>SQL</span><span>Vue.js</span><span>Laravel</span><span>R</span><span>Adobe XD</span>
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <section id="contact" class="section animate">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:mehulkaushal29@gmail.com">mehulkaushal29@gmail.com</a></p>
     <p>Location: Melbourne, VIC</p>
   </section>
 
   <footer>
-    <p>© 2024 Mehul Kaushal • <a href="https://linkedin.com/in/mehul-kaushal-80a625272/" target="_blank">LinkedIn</a> • <a href="https://github.com/mehulkaushal29" target="_blank">GitHub</a></p>
+    <p>© 2024 Mehul Kaushal · <a href="https://linkedin.com/in/mehul-kaushal-80a625272/" target="_blank">LinkedIn</a> · <a href="https://github.com/mehulkaushal29" target="_blank">GitHub</a></p>
   </footer>
+
+  <script>
+    const toggleTheme = () => {
+      const html = document.documentElement;
+      html.setAttribute('data-theme', html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
