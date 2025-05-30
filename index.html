@@ -69,7 +69,7 @@
     const toggleTheme = () => {
       const html = document.documentElement;
       html.setAttribute('data-theme', html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
-    };
+    }; 
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
