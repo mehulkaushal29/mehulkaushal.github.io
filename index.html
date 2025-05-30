@@ -1,16 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mehul Kaushal</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a2e0c6cfb4.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <i class="fas fa-moon"></i>
+  </div>
+
   <header>
-    <div class="logo">Mehul Kaushal</div>
+    <h1>Mehul Kaushal</h1>
     <nav>
       <ul>
         <li><a href="#about">About</a></li>
@@ -18,62 +22,69 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
   </header>
 
   <section class="hero">
-    <img src="mehul-photo.jpg" alt="Mehul Kaushal" class="profile-pic">
-    <h1>Mehul Kaushal</h1>
+    <img src="profile.jpg" alt="Mehul Kaushal">
+    <h2>Mehul Kaushal</h2>
     <p>IT Student · Tech & Innovation Enthusiast</p>
-    <div class="links">
-      <a href="https://github.com/mehulkaushal29" target="_blank">🐱</a>
-      <a href="https://linkedin.com/in/mehul-kaushal-80a625272" target="_blank">in</a>
+    <div class="icons">
+      <a href="https://github.com/mehulkaushal29" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/mehul-kaushal-80a625272" target="_blank"><i class="fab fa-linkedin-in"></i></a>
     </div>
   </section>
 
-  <section id="about" class="content-section">
+  <section id="about" class="about fade-in">
     <h2>About Me</h2>
-    <p>I'm currently pursuing a Bachelor of Information Technology at La Trobe University. I’ve worked on full-stack development, taught robotics and Python to students, and I’m passionate about building solutions that create real-world impact.</p>
+    <p>
+      I'm currently pursuing a Bachelor of Information Technology at La Trobe University. I’ve worked on full-stack development, and taught robotics and Python to students. Passionate about building impactful tech solutions.
+    </p>
+    <p>My recent highlights include:</p>
     <ul>
       <li>🚀 Medibank Hackathon, Coles Group Challenge</li>
-      <li>🧠 Digital Industry Project (2023)</li>
+      <li>🧠 Digital Industry Project</li>
       <li>🏆 Career Ready Advantage Program (Silver)</li>
     </ul>
-    <p>Check out my <a href="https://linkedin.com/in/mehul-kaushal-80a625272" target="_blank">LinkedIn</a> for more.</p>
+    <p>
+      <span style="font-weight: 500;">Feel free to explore more on</span> <a href="https://linkedin.com/in/mehul-kaushal-80a625272" target="_blank">LinkedIn</a>.
+    </p>
   </section>
 
-  <section id="skills" class="content-section">
+  <section id="skills" class="skills fade-in">
     <h2>Technologies</h2>
     <p>Always eager to learn something new, strong foundations in full-stack development.</p>
-    <div class="skills-grid">
-      <span>Python</span><span>Java</span><span>C++</span><span>C#</span><span>PHP</span><span>JavaScript</span>
-      <span>HTML5</span><span>CSS3</span><span>SQL</span><span>Vue.js</span><span>Laravel</span><span>R</span><span>Adobe XD</span>
+    <div class="tech-list">
+      <span>Python</span><span>Java</span><span>C++</span><span>C#</span><span>PHP</span>
+      <span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>SQL</span><span>Vue.js</span>
+      <span>Laravel</span><span>R</span><span class="highlight">Adobe XD</span>
     </div>
   </section>
 
-  <section id="contact" class="content-section">
+  <section id="contact" class="contact fade-in">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:mehulkaushal29@gmail.com">mehulkaushal29@gmail.com</a></p>
+    <p>Email: <span style="color: white;">mehulkaushal29@gmail.com</span></p>
   </section>
 
   <footer>
-    <p>© 2024 Mehul Kaushal · <a href="https://linkedin.com/in/mehul-kaushal-80a625272" target="_blank">LinkedIn</a> · <a href="https://github.com/mehulkaushal29" target="_blank">GitHub</a></p>
-    <a href="Mehul Kaushal (Resume).pdf" class="resume-btn" target="_blank">📄 Resume</a>
+    <p>&copy; 2024 Mehul Kaushal · <a href="https://linkedin.com/in/mehul-kaushal-80a625272">LinkedIn</a> · <a href="https://github.com/mehulkaushal29">GitHub</a></p>
   </footer>
 
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle("light");
-    }
+  <a href="Mehul Kaushal (Resume).pdf" target="_blank" class="resume-btn">
+    <i class="fas fa-file-alt"></i> Resume
+  </a>
 
-    window.addEventListener('scroll', () => {
-      document.querySelectorAll('.content-section').forEach(section => {
-        const top = section.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
-          section.classList.add('visible');
-        }
+  <script>
+    const toggleTheme = () => {
+      document.body.classList.toggle("light-theme");
+    };
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
       });
-    });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(section => observer.observe(section));
   </script>
 </body>
-</html> 
+</html>
