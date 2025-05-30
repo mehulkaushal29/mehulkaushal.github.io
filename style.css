@@ -1,130 +1,181 @@
-:root[data-theme='dark'] {
-  --bg: #1f1f1f;
-  --text: #ffffff;
-  --secondary: #999;
-  --accent: #e91e63;
-  --tag: #333;
+:root {
+  --bg-dark: #101010;
+  --bg-light: #f5f5f5;
+  --text-dark: #ffffff;
+  --text-light: #1b1b1b;
+  --accent: #00bfa6;
+  --glass: rgba(255, 255, 255, 0.05);
 }
 
-:root[data-theme='light'] {
-  --bg: #ffffff;
-  --text: #111;
-  --secondary: #444;
-  --accent: #007bff;
-  --tag: #e0e0e0;
+[data-theme="dark"] {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+}
+
+[data-theme="light"] {
+  --bg: var(--bg-light);
+  --text: var(--text-light);
 }
 
 body {
-  margin: 0;
   font-family: 'Montserrat', sans-serif;
   background: var(--bg);
   color: var(--text);
-  transition: background 0.4s, color 0.4s;
+  margin: 0;
+  text-align: center;
+  transition: all 0.4s ease;
 }
 
-nav {
+.navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: black;
-  color: white;
+  padding: 1em 2em;
+  position: sticky;
+  top: 0;
+  background-color: var(--glass);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
 }
 
-nav h1 {
-  font-size: 1.5rem;
+.nav-left {
+  font-weight: 700;
+  font-size: 1.5em;
+  color: var(--text);
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-nav ul li a {
-  color: white;
+.nav-right a, .toggle-theme {
+  color: var(--text);
   text-decoration: none;
+  margin-left: 1.5em;
   font-weight: 500;
-}
-
-.toggle-theme {
   background: none;
   border: none;
-  color: white;
-  font-size: 1.1rem;
+  font-size: 1em;
   cursor: pointer;
 }
 
-header {
-  text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(135deg, #2c3e50, #34495e);
+.nav-right a:hover, .toggle-theme:hover {
+  color: var(--accent);
+}
+
+.hero-section {
+  background: linear-gradient(to right, #222, #333);
+  padding: 5em 1em 3em;
   color: white;
 }
 
 .profile-pic {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  width: 130px;
-  height: 130px;
-  border: 3px solid white;
+  border: 5px solid white;
+  object-fit: cover;
+  margin-bottom: 1em;
 }
 
-.icons a {
-  margin: 10px;
-  font-size: 1.5rem;
-  display: inline-block;
-  text-decoration: none;
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 0.2em 0 0.1em;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.circle-icon {
+  background: #2e2e2e;
   color: white;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  line-height: 46px;
+  font-size: 1.3rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
 }
 
-.resume-button {
-  display: inline-block;
-  margin-top: 20px;
+.circle-icon:hover {
+  background: var(--accent);
+  transform: scale(1.1);
+}
+
+.resume-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   background: var(--accent);
   color: white;
   padding: 12px 20px;
   border-radius: 30px;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
-  transition: 0.3s;
+  font-size: 14px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+  z-index: 1000;
 }
 
-.resume-button:hover {
-  background: #ff4081;
-}
-
-section {
+.section {
+  padding: 4em 2em;
   max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-  text-align: center;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
 }
 
-h3 {
-  font-size: 2rem;
+.section.visible {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+h2 {
+  font-size: 2.2rem;
   color: var(--accent);
+  margin-bottom: 1.5em;
 }
 
-.skills-container {
+.tech-tags {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 12px;
+  font-size: 1.05rem;
 }
 
-.skills-container span {
-  background: var(--tag);
+.tech-tags span {
+  background: #333;
+  padding: 10px 18px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.tech-tags span:hover {
+  background: var(--accent);
   color: white;
-  padding: 8px 15px;
-  border-radius: 20px;
-  font-size: 0.9rem;
+}
+
+.alt-section {
+  background: #1b1b1b;
+  padding: 4em 1.5em;
 }
 
 footer {
-  text-align: center;
-  padding: 20px;
+  padding: 2em 1em;
+  background: #111;
   font-size: 0.9rem;
-  color: var(--secondary);
+  color: #bbb;
 }
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
