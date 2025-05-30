@@ -7,29 +7,28 @@
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #1a1a1a;
-  color: #eee;
+  color: #e0e0e0;
   line-height: 1.6;
-  scroll-behavior: smooth;
 }
 
 header {
-  background-color: #000;
-  padding: 30px 40px;
+  background-color: #111;
+  padding: 25px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: #fff;
 }
 
 .tag {
-  background-color: #e60073;
-  color: white;
-  font-size: 0.9rem;
-  padding: 3px 10px;
+  background-color: #ff267a;
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 4px 10px;
   border-radius: 5px;
   margin-left: 10px;
 }
@@ -40,7 +39,7 @@ header h1 {
 }
 
 .navbar a {
-  color: #eee;
+  color: #e0e0e0;
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
@@ -48,22 +47,25 @@ header h1 {
 }
 
 .navbar a:hover {
-  color: #e60073;
+  color: #ff267a;
 }
 
-.resume-link {
-  background-color: #fff;
-  color: #000;
-  padding: 8px 14px;
+.resume-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff267a;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   transition: background-color 0.3s;
 }
 
-.resume-link:hover {
-  background-color: #e60073;
-  color: #fff;
+.resume-fab:hover {
+  background-color: #d1005a;
 }
 
 .hero {
@@ -73,20 +75,24 @@ header h1 {
 
 .hero h2 {
   font-size: 1.8rem;
-  margin-bottom: 20px;
   color: #fff;
 }
 
 .skills {
   background-color: #222;
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .skills h2 {
-  color: #ff4081;
-  margin-bottom: 30px;
+  color: #ff267a;
+  margin-bottom: 10px;
   font-size: 2rem;
+}
+
+.skills p {
+  margin-bottom: 30px;
+  color: #bbb;
 }
 
 .skills-grid {
@@ -105,13 +111,13 @@ header h1 {
 }
 
 section {
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
 section h2 {
   font-size: 2rem;
-  color: #ff4081;
+  color: #ff267a;
   margin-bottom: 20px;
 }
 
@@ -124,17 +130,13 @@ section p {
 
 footer {
   text-align: center;
-  background-color: #000;
+  background-color: #111;
   color: #aaa;
   padding: 20px;
   font-size: 0.9rem;
 }
 
 footer a {
-  color: #00adb5;
+  color: #ff267a;
   text-decoration: none;
-}
-
-footer a:hover {
-  color: #ff005c;
 }
