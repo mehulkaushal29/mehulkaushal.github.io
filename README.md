@@ -10,4 +10,8 @@ Currently pursuing a Bachelor of Information Technology at La Trobe University.
 📂 Portfolio Projects  
 [Cobbler Ease App](https://github.com/menuikaushal29/cobbler-ease-app)  
 Shoe repair service app (Flutter/Firebase).  
-▶️ [Watch Demo] https://youtu.be/exWFMB2j3kA 
+▶️ https://youtu.be/exWFMB2j3kA 
+2. Eternal Wisdom (Capstone Project)
+Quiz-based web app with data visualization
+React.js, Firebase, D3.js
+▶️ https://youtu.be/4VxavKID67w
