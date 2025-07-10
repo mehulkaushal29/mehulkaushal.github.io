@@ -3,98 +3,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mehul Kaushal</title>
+  <meta name="description" content="Mehul Kaushal - IT Student | Full-Stack Developer | Robotics Enthusiast">
+  <title>Mehul Kaushal | Portfolio</title>
   <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
   <nav class="navbar glass">
     <div class="nav-left">Mehul Kaushal</div>
     <div class="nav-right">
       <a href="#about">About</a>
+      <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
-      <button class="toggle-theme" onclick="toggleTheme()">🌓</button>
+      <button class="toggle-theme" onclick="toggleTheme()" aria-label="Toggle dark mode">🌓</button>
     </div>
   </nav>
 
   <header class="hero-section animate">
-    <img src="profile.jpg" alt="Profile Photo" class="profile-pic" />
+    <img src="profile.jpg" alt="Mehul Kaushal" class="profile-pic" width="150" height="150"/>
     <div class="hero-text">
       <h1>Mehul Kaushal</h1>
-      <p class="subtitle">IT Student · Passionate about Tech & Innovation</p>
+      <p class="subtitle">IT Student | Full-Stack Developer | Robotics Enthusiast</p>
       <div class="social-icons">
-        <a href="https://github.com/mehulkaushal29" target="_blank" class="circle-icon">🐱</a>
-        <a href="https://linkedin.com/in/mehul-kaushal-80a625272/" target="_blank" class="circle-icon">in</a>
+        <a href="https://github.com/mehulkaushal29" target="_blank" rel="noopener noreferrer" class="circle-icon" aria-label="GitHub">🐱</a>
+        <a href="https://linkedin.com/in/mehul-kaushal-80a625272/" target="_blank" rel="noopener noreferrer" class="circle-icon" aria-label="LinkedIn">in</a>
       </div>
     </div>
   </header>
 
-  <a class="resume-fab" href="Mehul Kaushal (Resume).pdf" download>📄 Resume</a>
+  <a class="resume-fab" href="Mehul-Kaushal-Resume.pdf" download aria-label="Download resume">📄 Resume</a>
 
-  <!-- 🎬 Featured Project moved here -->
   <section id="projects" class="section animate">
-    <h2>Featured Project</h2>
-    <div class="video-container">
-      <iframe 
-        src="https://www.youtube.com/embed/exWFMB2j3kA" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
+    <h2>Portfolio Projects</h2>
+    
+    <div class="project-card">
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/exWFMB2j3kA" 
+          title="Cobbler Ease App Demo"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="project-details">
+        <h3>Cobbler Ease App</h3>
+        <p>Shoe repair service app built with Flutter and Firebase</p>
+        <div class="project-links">
+          <a href="https://github.com/menuikaushal29/cobbler-ease-app" target="_blank" rel="noopener noreferrer" class="project-link">View Code</a>
+          <a href="https://youtu.be/exWFMB2j3kA" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo</a>
+        </div>
+      </div>
     </div>
-    <p style="margin-top: 1.5em;">Cobbler Ease App – Shoe repair service (Flutter/Firebase)</p>
+    
+    <div class="project-card">
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/4VxavKID67w" 
+          title="Eternal Wisdom App Demo"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="project-details">
+        <h3>Eternal Wisdom (Capstone Project)</h3>
+        <p>Quiz-based web app with data visualization using React.js, Firebase, and D3.js</p>
+        <div class="project-links">
+          <a href="https://youtu.be/4VxavKID67w" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="about" class="section animate">
     <h2>About Me</h2>
     <p>
       Currently pursuing a Bachelor of Information Technology at La Trobe University. 
-      Experienced in full-stack development, robotics, and teaching. Participated in major hackathons and digital challenges, 
-      and passionate about building real-world solutions through innovative thinking.
+      Experienced in full-stack development, robotics, and teaching. Passionate about 
+      building real-world solutions through innovative thinking and technology.
     </p>
-    <ul>
-      <li>🏅 AWS Certified, C++ Certified</li>
-      <li>🏆 Career Ready Program (Silver)</li>
-      <li>🚀 Hackathons: Medibank, Coles Group Challenge, CSL</li>
-    </ul>
+    <div class="about-highlights">
+      <div class="highlight-card">
+        <h3>💻 Skills</h3>
+        <ul>
+          <li>Java, Python, JavaScript</li>
+          <li>React, Node.js, Flutter</li>
+          <li>Firebase, D3.js</li>
+        </ul>
+      </div>
+      <div class="highlight-card">
+        <h3>🏆 Achievements</h3>
+        <ul>
+          <li>Hackathon participant</li>
+          <li>Tech tutor</li>
+          <li>AWS Certified</li>
+          <li>C++ Certified</li>
+        </ul>
+      </div>
+      <div class="highlight-card">
+        <h3>🤖 Passions</h3>
+        <ul>
+          <li>Robotics development</li>
+          <li>App development</li>
+          <li>Data visualization</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section id="skills" class="section animate alt-section">
     <h2>Skills & Technologies</h2>
     <p>Strong foundations in software, web, and data technologies.</p>
     <div class="tech-tags">
-      <span>Python</span><span>Java</span><span>C++</span><span>C#</span>
-      <span>R</span><span>PHP</span><span>JavaScript</span><span>React</span>
-      <span>HTML5</span><span>CSS3</span><span>SQL</span>
+      <span>Python</span>
+      <span>Java</span>
+      <span>JavaScript</span>
+      <span>C++</span>
+      <span>C#</span>
+      <span>React</span>
+      <span>Node.js</span>
+      <span>Flutter</span>
+      <span>Firebase</span>
+      <span>HTML5</span>
+      <span>CSS3</span>
+      <span>SQL</span>
+      <span>D3.js</span>
       <span>Power BI</span>
     </div>
   </section>
 
   <section id="contact" class="section animate">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:mehulkaushal29@gmail.com">mehulkaushal29@gmail.com</a></p>
+    <p>Let's connect and collaborate!</p>
+    <div class="contact-info">
+      <a href="mailto:mehulkaushal29@gmail.com" class="email-link">mehulkaushal29@gmail.com</a>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/mehul-kaushal-80a625272/" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+        <a href="https://github.com/mehulkaushal29" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>© Mehul Kaushal · <a href="https://linkedin.com/in/mehul-kaushal-80a625272/" target="_blank">LinkedIn</a> · <a href="https://github.com/mehulkaushal29" target="_blank">GitHub</a></p>
+    <p>© <span id="current-year"></span> Mehul Kaushal · All rights reserved</p>
   </footer>
 
   <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Theme toggle function
     const toggleTheme = () => {
       const html = document.documentElement;
-      html.setAttribute('data-theme', html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+      const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
     };
 
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    // Intersection Observer for animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
         }
       });
-    });
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
   </script>
 </body>
 </html>
