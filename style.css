@@ -180,6 +180,25 @@ h2 {
   height: 100%;
   border-radius: 8px;
 }
+.project-card {
+  margin-bottom: 3em;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+  color: var(--accent);
+}
+
+.project-card p {
+  margin-top: 1em;
+  font-size: 1rem;
+}
+
+.alt-section {
+  background: #1b1b1b;
+  padding: 4em 1.5em;
+}
 
 
 .alt-section {
